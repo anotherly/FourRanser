@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+   <title>Document</title>
+<style type="text/css">
+
+@charset "utf-8";
+	ul{
+        list-style:none;
+        -webkit-padding-start: 0px;
+	}
+	body {
+		font: 14px '맑은 고딕';
+		background-color:#bfdfff;
+		margin:0px;
+		padding:0px;
+	}
+	.all{
+		text-align:center;
+		/* -webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px; */
+	}
+	.container {/* 전체 div */
+		background-color:#e4e4e4;
+		width: 1200px;
+		padding: 0px;
+		margin : -15px auto;
+	}
+
+	header {
+		background-color:white;
+		position : relative;
+		height : 180px;
+		background-size: 100% auto;
+		/* background-repeat: no-repeat; */
+		/* background-position: left top; */
+	}
+	/* header img{
+        float:left;
+    } */
+
+	.navi{ /* 위의메뉴바 */
+		position: relative;
+		float: right;
+		right:0px; top: 50px;
+		width:65%;
+		height:60px;
+	}
+	.navi ul li {
+		position: relative;
+		float:left;
+		font-size:15px;
+	}
+	.navi ul li a, .navi a:visited { /* 위의메뉴바 */
+        position : relative;
+		padding: 10px 15px 15px 15px;
+		display: block;
+		color: #373737;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-decoration: none;
+		text-align:center;
+		z-index:2;
+	}
+
+	.mainlist li:hover .a1 {
+        font-size: 22px;
+        text-shadow:0px 2px 2px #000;
+        background-color: rgba(120, 120, 255, 0.2);
+        font-weight: bold;
+        color:#3366ff;
+        z-index:2;
+	}
+
+	.caption {
+		position: absolute;
+        overflow:hidden;
+		top:54px;left:0px;
+		height: 0;
+        transition: all 0.3s ;
+		z-index: 1;
+	}
+	/* .caption li{
+	    padding: 10px 15px 15px 15px;
+	        background: rgba(120,120,120,0.5);
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-align: center;
+		float:none;
+	} 충돌일으켯음 아래거랑*/
+	.caption .a2{
+	    padding: 10px 15px 15px 15px;
+        background: rgba(150,150,150,0.5);
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-decoration: none;
+		text-align: center;
+		float:none;
+	}
+
+    .caption .a2:hover{
+         background-color:rgba(120,120,120,1);
+		 text-shadow:0px 2px 2px #000;
+		 color: white;
+    }
+
+	.mainlist li:hover a + .caption,	.mainlist li:hover .caption{
+     height:250px;
+        /*-webkit-transform: translateY(200px);*/
+	}
+
+
+	.line{
+		position:absolute;
+		top:194px;
+		border:2px solid lightblue;
+		height:2px;
+		width:500%;
+	}
+
+	/* 가운데 사진 넘어가는 */
+
+	#gallery{
+		width:1200px; height:500px; margin:0px 0px 60px 0px;
+		position:relative;
+		box-shadow:0 5px 5px rgba(0, 0, 0, 0.3);
+	}
+	#gallery h2{
+        background-color: rgba(255,255,255,0.5);
+		position:absolute;
+        padding: 30px; width: 300px;
+		left:50px;top:50px;
+		font-size:2em;
+		color:#001188;
+		text-shadow:0px 1px 1px #000;
+	}
+	#gallery span{
+		 color : red;
+	}
+	#gallery img{
+		width:1200px;
+		height:600px;
+	}
+	#photo{
+		text-align:center;
+	}
+	#gallery ul{
+		width:6000px;
+		height:500px;
+		margin:0 auto;
+	}
+	#photo_list ul li{
+		width:1200px;
+		height:600px;
+		float:left;text-align:center;
+	}
+	#photo_list{
+		width:1200px;
+		height:500px;
+		margin:0px;
+		overflow:hidden;
+	}
+	.btn_wrap{
+		text-align:center;
+		font-size:25px;
+		margin: 25px;
+	}
+	.btn_wrap a{
+		font-weight:bold;
+		text-decoration:none;
+	}
+
+	.middle{
+		margin:85px 10px;
+		height:300px;
+	}
+	.middle div{
+		float:left;width:295px;height:270px;
+		color:white;
+	}
+	.middle div ul{
+		margin-left:50px;
+		margin-top:50px;
+	}
+
+	.middle .box1{background:darkgray;}
+	.box2{background:#6699ff;}
+	.box3{background:#006633;}
+	.box4{background:blue;}
+
+	footer{
+		margin-top:140px;
+		padding: 20px 0px; background:#97dbff;
+		color:#494949;     text-align:center;
+		clear:both;
+	}
+</style>
+
+<script type="text/javascript">
+//윈도우에 모든내용 로딩 처리하는 이벤트
+	window.onload=function(){
+	  
+	   var list_zone=document.getElementById("inner_list");
+	   var list_a=list_zone.getElementsByTagName("a");
+	   
+	   //ul 요소에 속한 것 콘솔창에 출력 해 보기
+	   console.log(list_zone);
+	   console.log(list_a);//a태그 수만큼 출력
+		/*
+		  포토 리스트의 모든 <a>에 클릭 이벤트를 등록하기 위해서
+		  반복문을 이용하여 8개의 <a>에 모두 이벤트를 등록했습니다.
+		*/
+		for(var i=0; i<list_a.length; i++){
+		  list_a[i].onclick=function(){
+		   var ph=document.getElementById("photo").children[0];
+		   ph.src=this.href;
+		   var a=ph.src;
+
+		   console.log("ph="+a);
+		   return false; // <a>를 클릭했을 때 링크가 되지 않도록 합니다.
+		  }
+		}
+	  
+	   /*② 이전, 다음 버튼을 클릭할 때 마다 <ul>이 100px만큼
+			  증가 또는 감소되어 좌·우측으로 이동됩니다. */
+	   
+	   /*다음 버튼을 클릭했을 때 마다 <ul>이 100px만큼
+		  좌측으로 이동해야 합니다.*/
+	   var b_btn=document.getElementById("next_btn");// >  
+	   var m_num=0;
+	   b_btn.onclick=function(){
+		   if(m_num>=list_a.length-1) return false;//8-3=5/ 5개를 숨기고 3개를 보이기
+		   m_num++;
+		   list_zone.style.marginLeft=-1200*m_num+"px";
+		  
+		   var ll=list_zone.style.marginLeft;
+		   console.log("> : "+ll);
+		  
+			return false; // <a>를 클릭했을 때 링크가 되지 않도록 합니다.
+	  }
+	  
+	   /*이전 버튼을 클릭했을 때 마다 <ul>이 100px만큼
+		  우측으로 이동해야 합니다.*/
+	   var n_btn=document.getElementById("before_btn");// <
+	  
+	   n_btn.onclick=function(){
+		   if(m_num<=0) return false;{
+			   m_num--;
+		   }
+		   list_zone.style.marginLeft=-1200*m_num+"px";
+			var ll=list_zone.style.marginLeft;
+			console.log("<  : "+ll);
+			return false; // <a>를 클릭했을 때 링크가 되지 않도록 합니다.
+	  }
+	}
+
+</script>
+
+ </head>
+
+ <p class= "all">
+ <div class="container">
+	<!--   헤더부분   -->
+	<header>
+		<a href="main_page_save.html"><img src="image\mainicon2.png" style= width:400px;height:180px;></a>
+		<nav class="navi">
+				<ul class="mainlist"><!-- 예약 : 이름 연락처 보내기 취소(폼) / 이용 요금(표로)  -->
+
+					<li><a href="insa1.html" class = "a1">회사 소개</a>
+                        <div class="caption">
+                            <ul>
+                                <li><a href="insa1.html" class = "a2">인사말</a></li>
+                                <li><a href="come_road.html" class = "a2">오시는 길</a></li>
+                                <li><a href="gisa.html" class = "a2">기사 소개</a></li>
+                            </ul>
+                        </div>
+					</li>
+
+					<li><a href="#" class = "a1">차량 소개</a>
+                        <div class="caption">
+                            <ul>
+                                <li><a href="use_money.html" class = "a2">귀성용</a></li>
+                                <li><a href="use_money.html" class = "a2">소풍용</a></li>
+                                <li><a href="use_money.html" class = "a2">특수 구조</a></li>
+                                <li><a href="use_money.html" class = "a2">기타</a></li>
+                            </ul>
+                        </div>
+					</li>
+
+					<li><a href="reservation.html" class = "a1">이용 안내</a>
+                        <div class="caption">
+                            <ul>
+                                <li><a href="reservation.html" class = "a2">예약</a></li>
+                                <li><a href="use_money.html" class = "a2">이용 요금</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+					<li><a href="use_money.html" class = "a1">이용 문의</a></li> <!--  게시판-->
+					</li>
+				</ul>
+		</nav><!-- nav -->
+	</header>
+	<!--   메인 간판사진   -->
+		<div id="gallery">
+			<h2><span>안전</span>과 <span>속도</span>를 동시에!<p></p>
+		국내 최초 IT연계 <p></p><span style="color:#004d0e;">자동화 시스템</span></h2>
+			<div id="photo_list">
+			  <ul  id="inner_list">
+
+				<li><a href="image/set1.jpg">
+				<img src="image/set1.jpg" alt="사진1" /></a></li>
+
+				<li><a href="image/set2.jpg">
+				<img src="image/set2.jpg" alt="사진2" /></a></li>
+
+				<li><a href="image/set3.jpg">
+				<img src="image/set3.jpg" alt="사진3" /></a></li>
+
+				<li><a href="image/set4.jpg">
+				<img src="image/set4.jpg" alt="사진4" /></a></li>
+
+				<li><a href="image/set5.jpg">
+				<img src="image/set5.jpg" alt="사진5" /></a></li>
+
+			  </ul>
+			</div>
+		<p class="btn_wrap">
+		<a href="#" id="before_btn">&lt;</a>
+		<a href="#" id="next_btn">&gt;</a>
+		</p>
+  </div>
+	<!--   4색 알림창   -->
+	<div class="middle">
+		<div class="box1"><span>
+			<ul><h2>공지사항<br></h2>
+			<p></p>
+				<li>[알림]추석 연휴 휴무 공지입니다.<br>
+				</li>
+				<p></p>
+				<li>[알림]휴가 공지<br>
+				</li>
+			</ul>
+		</div>
+		<div class="box2">
+			<ul><h2>차량 안내<br></h2>
+			<p></p>
+				<li>중앙버스에서 운영하는 <p></p>모든 차량 확인 가능
+				</li>
+				<p></p>
+			</ul>
+		</div>
+		<div class="box3">
+			<ul><h2>온라인상담<br></h2>
+			<p></p>
+				<li>귀성용 소풍용 특수 목적등,<p></p>개인 맞춤으로 구성된 서비스 <p></p>편하게 물어보세요
+				</li>
+			</ul>
+		</div>
+		<div class="box4">
+			<ul><h2>운영시간<br></h2>
+			<p></p>
+				<li>월~금 11:00~23:00
+				</li>
+				<p></p>
+				<li>토요일 11:00~18:00
+				</li>
+				<p></p>
+				<li>일요일 공휴일 휴무
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer  삽입 ----------------------------------------- -->
+	<footer>
+		<p>사업자등록번호 104-81-59383 통신판매업신고번호 중구 065325 중앙HTA㈜</p>
+		<p>서울특별시 종로구 율곡로10길 105 디아망 401호(봉익동 10-1 디아망 401호)</p>
+		<p>TEL: 070-8240-3211 FAX: 02-777-5407 COPYRIGHT ⓒ 2015 HTA CO, LTD. ALL RESERVED</p>
+	</footer>
+  </div>
+ </p>
+ </body>
+</html>

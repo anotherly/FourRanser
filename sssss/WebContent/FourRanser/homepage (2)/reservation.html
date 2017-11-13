@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+   <title>Document</title>
+<style type="text/css">
+
+@charset "utf-8";
+	ul{
+        list-style:none;
+        -webkit-padding-start: 0px;
+	}
+	body {
+		font: 14px '맑은 고딕';
+		background-color:#bfdfff;
+		margin:0px;
+		padding:0px;
+	}
+	.all{
+		text-align:center;
+		/* -webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px; */
+	}
+	.container {/* 전체 div */
+		background-color:#e4e4e4;
+		width: 1200px;
+		padding: 0px;
+		margin : -15px auto;
+	}
+
+	header {
+		background-color:white;
+		position : relative;
+		height : 180px;
+		background-size: 100% auto;
+		/* background-repeat: no-repeat; */
+		/* background-position: left top; */
+	}
+	/* header img{
+        float:left;
+    } */
+
+	.navi{ /* 위의메뉴바 */
+		position: relative;
+		float: right;
+		right:0px; top: 50px;
+		width:65%;
+		height:60px;
+	}
+	.navi ul li {
+		position: relative;
+		float:left;
+		font-size:15px;
+	}
+	.navi ul li a, .navi a:visited { /* 위의메뉴바 */
+        position : relative;
+		padding: 10px 15px 15px 15px;
+		display: block;
+		color: #373737;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-decoration: none;
+		text-align:center;
+		z-index:2;
+	}
+
+	.mainlist li:hover .a1 {
+        font-size: 22px;
+        text-shadow:0px 2px 2px #000;
+        background-color: rgba(120, 120, 255, 0.2);
+        font-weight: bold;
+        color:#3366ff;
+        z-index:2;
+	}
+
+	.caption {
+		position: absolute;
+        overflow:hidden;
+		top:54px;left:0px;
+		height: 0;
+        transition: all 0.3s ;
+		z-index: 1;
+	}
+	/* .caption li{
+	    padding: 10px 15px 15px 15px;
+	        background: rgba(120,120,120,0.5);
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-align: center;
+		float:none;
+	} 충돌일으켯음 아래거랑*/
+	.caption .a2{
+	    padding: 10px 15px 15px 15px;
+        background: rgba(150,150,150,0.5);
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-decoration: none;
+		text-align: center;
+		float:none;
+	}
+
+    .caption .a2:hover{
+         background-color:rgba(120,120,120,1);
+		 text-shadow:0px 2px 2px #000;
+		 color: white;
+    }
+
+	.mainlist li:hover a + .caption,	.mainlist li:hover .caption{
+     height:250px;
+        /*-webkit-transform: translateY(200px);*/
+	}
+
+
+	.line{
+		position:absolute;
+		top:180px;
+		border:2px solid #bfdfff;
+		height:2px;
+		width:500%;
+	}
+
+	/* 가운데 사진 넘어가는 */
+		aside{
+			padding:50px;
+		    overflow: visible;
+		}
+		aside li{
+			margin:50px;
+		}
+		.sidebar{
+			float:left;
+			margin-top:-30px;
+			width:150px;
+			height:550px;
+			background-color:#fff;
+			padding-top:30px;
+			padding-left:10px;
+			padding-right:10px;
+		}
+		aside li{
+			 margin-left:50px;
+			 margin:10px;
+			 margin-top:-10px;
+			border-bottom:1px solid #ddd ;
+			padding:15px 15px;
+		}
+		aside h3{
+			 margin-left:50px;
+			 margin:10px;
+			border-bottom:1px solid #ddd ;
+			padding:15px 15px;
+			background-color:#ff6666;
+			color:#ffffff;
+		}
+		aside a:link{
+			text-decoration: none;
+		}
+		aside li:hover{
+			background-color:#ddd;
+			font-weight:bold;
+		}
+		.banner{
+			position:relative;
+			padding:30px;
+			float: right;
+			width: 900px;
+			height:900px;
+			background-color:white;
+			margin: 30px;
+			padding-left:-50px;
+		}
+		.banner img{
+			width:100%;
+		}
+		footer{
+			margin-top:140px;
+			padding: 20px 0px; background:#97dbff;
+			color:#494949;     text-align:center;
+			clear:both;
+		}
+
+  textarea{
+	position:relative;
+	left: 50px;
+  }
+  #member, #satis{width:50px;}
+
+		 fieldset{
+			width: 550px;
+			margin-bottom:20px;
+			margin-left: 150px;
+		  }
+		  td{
+			width:130px;
+			margin:10px;
+		  }
+
+		 .person input{
+			width:50px;
+		 }
+		 
+		 .t1 td{
+			/* border :1px solid green; */
+		 }
+		 .tseason td{
+			width: 300px;
+			/* border:2px solid red; */
+		 }
+
+		 .tbuga{
+			width:500px;
+		 }
+		 .tbuga td{
+			width: 200px;
+			/* border:2px solid blue; */
+		 }
+</style>
+
+ </head>
+
+ <p class= "all">
+ <div class="container">
+	<!--   헤더부분   -->
+		<header>
+			<a href="main_page_save.html"><img src="image\mainicon2.png" style= width:400px;height:180px;></a>
+			<nav class="navi">
+					<ul class="mainlist"><!-- 예약 : 이름 연락처 보내기 취소(폼) / 이용 요금(표로)  -->
+						<li><a href="insa1.html" class = "a1">회사 소개</a>
+							<div class="caption">
+								<ul>
+									<li><a href="insa1.html" class = "a2">인사말</a></li>
+									<li><a href="come_road.html" class = "a2">오시는 길</a></li>
+									<li><a href="gisa.html" class = "a2">기사 소개</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#" class = "a1">차량 소개</a>
+							<div class="caption">
+								<ul>
+									<li><a href="use_money.html" class = "a2">귀성용</a></li>
+									<li><a href="use_money.html" class = "a2">소풍용</a></li>
+									<li><a href="use_money.html" class = "a2">특수 구조</a></li>
+									<li><a href="use_money.html" class = "a2">기타</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="reservation.html" class = "a1">이용 안내</a>
+							<div class="caption">
+								<ul>
+									<li><a href="use_money.html" class = "a2">예약</a></li>
+									<li><a href="use_money.html" class = "a2">이용 요금</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="use_money.html" class = "a1">이용 문의</a></li> <!--  게시판-->
+						</li>
+					</ul>
+			</nav><!-- nav -->
+		</header>
+	<!--   메인 간판사진   -->
+	<div class="line"></div>
+		<aside class="sidebar">
+				 <h3>이용 안내</h3>
+			  <div class="div_left">
+				  <ul>
+						<li><a href="reservation.html">예약</a></li>
+						<li><a href="use_money.html">이용 요금</a></li>
+				  </ul>
+			  </div>
+		</aside>
+
+		<article>
+			<section class="content">
+				<div class="banner">
+						<h1 style="font-size:30px">예약</h1>
+						<form action="main_page_save.html">
+							  <fieldset class ="person"> 
+								<legend> 개인 정보 </legend>
+								<table>
+									<tr>
+										<td>* 이름</td>
+										<td><input type="text"></td>
+										<td>* 패스워드</td>
+										<td><input type="password" style="width:100px;"></td>
+									</tr> 
+								</table>
+								<table>
+									<tr>
+										<td>* 전화번호</td>
+										<td style="width:300px;">
+										<select id="phone">
+											<optgroup label="선택하세요">		
+													<option value="KT">KT</option>
+													<option value="LGU">LG U+</option>
+													<option value="ST">SKT</option>
+											</optgroup>
+										</select>
+										<input type="tel"> - <input type="tel"> - <input type="tel"> 
+										</td>
+									</tr>
+										<tr>
+											<td>E-mail</td>
+											<td><input type="email" style="width:100px;"> @ 
+											<select id="email">
+												<optgroup label="선택하세요">		
+															<option value="naver">naver.com</option>
+															<option value="gmail">gmail.com</option>
+															<option value="daum">daum.net</option>
+															<option value="chol">chol.com</option>
+															<option value="yahoo">yahoo.com</option>
+												</optgroup>
+											</select>
+											</td>
+										</tr>
+								</table>
+							</fieldset>
+							<fieldset class ="bus">
+								<legend> 대여 정보 </legend>
+								<table class="t1">
+									<tr>
+										<td style="width:210px;">
+											<label class="reg" for="member">
+											 * 차량 대수/탑승 인원	
+											</label>
+										</td>
+										<td style="width:70px;"><input type="number" id="member" value="1" min="1" max="10" step="1">
+										</td>
+										<td style="width:70px;"><input type="number" id="member" value="1" min="1" max="10" step="1">
+										</td>
+									</tr> 
+									</table>
+									<table class="t1">
+									<tr>
+										<td style="width:210px;">희망 차량</td>
+										<td>
+											<select id="city">
+											<optgroup label="선택하세요">		
+														<option value="45인승관광버스">45인승관광버스</option>
+														<option value="28인승우등리무진" class="__web-inspector-hide-shortcut__">28인승우등리무진</option>
+														<option value="25인승vip버스">25인승vip버스</option>
+														<option value="25인승관광버스">25인승관광버스</option>
+														<option value="16인승미니리무진">16인승미니리무진</option>
+											</optgroup>  
+										</select>
+										</td>
+									</tr>
+								</table>
+								<table class="tseason">
+									<tr>
+										<td>* 대여 기간</td>
+										<td style="width:420px;"><input type="datetime-local" value="2017-09-24 T 12:00" style="width:120px;">
+										~<input type="datetime-local" value="2017-09-24 T 12:00" style="width:120px;">
+										
+									</tr>
+									<tr>
+										<td></td>
+										<td><input type="time" value="09:00" > ~ <input type="time" value="09:00" >
+										</td>
+									</tr>
+								</table>
+								<table class="tbuga">
+									<tr>
+										<td>* 공인인증서
+										</td>
+										<td><input type="file">
+										</td>
+									</tr>
+									<tr>
+										<td>출발지</td>
+										<td>
+											<select id="city">
+											<optgroup label="선택하세요">		
+														<option value="naver">서울</option>
+														<option value="naver">경기</option>
+														<option value="daum">강원</option>
+														<option value="chol">충청</option>
+														<option value="yahoo">경상</option>
+														<option value="yahoo">전라</option>
+											</optgroup>  
+										</select>  <input type="text"> 
+										</td>
+									</tr>
+									<tr>
+										<td>경유지</td>
+										<td>
+											<select id="city">
+											<optgroup label="선택하세요">		
+														<option value="naver">서울</option>
+														<option value="naver">경기</option>
+														<option value="daum">강원</option>
+														<option value="chol">충청</option>
+														<option value="yahoo">경상</option>
+														<option value="yahoo">전라</option>
+											</optgroup>  
+										</select>  <input type="text"> 
+										</td>
+									</tr>
+									<tr>
+									<td>도착지</td>
+										<td>
+											<select id="city">
+											<optgroup label="선택하세요">		
+														<option value="naver">서울</option>
+														<option value="naver">경기</option>
+														<option value="daum">강원</option>
+														<option value="chol">충청</option>
+														<option value="yahoo">경상</option>
+														<option value="yahoo">전라</option>
+											</optgroup>  
+										</select>  <input type="text"> 
+										</td>
+									</tr>
+								</table>
+								<table class="t1">
+									<tr>
+										<td style="width:210px;">운행구분
+										</td>
+										<td style="width:70px;"><input type="radio" name="wr_10" value="왕복" checked="">왕복
+										</td>
+										<td style="width:70px;"> <input type="radio" name="wr_10" value="편도" checked="">편도
+										</td>
+									</tr> 
+									<tr>
+										<td style="width:210px;">견적확인방법
+										</td>
+										<td style="width:70px;"><input type="radio" name="wr_10" value="핸드폰" checked="">핸드폰
+										</td>
+										<td style="width:70px;"> <input type="radio" name="wr_10" value="전화" checked="">전화
+										</td>
+										<td style="width:70px;"><input type="radio" name="wr_10" value="팩스" checked="">팩스
+										</td>
+										<td style="width:70px;"> <input type="radio" name="wr_10" value="이메일" checked="">이메일
+										</td>
+									</tr> 
+									<tr>
+										<td style="width:210px;">부가세
+										</td>
+										<td style="width:70px;"><input type="radio" name="wr_10" value="포함" checked="">포함
+										</td>
+										<td style="width:70px;"> <input type="radio" name="wr_10" value="미포함" checked="">미포함
+										</td>
+									</tr> 
+									<tr>
+										<td style="width:210px;">주차료
+										</td>
+										<td style="width:70px;"><input type="radio" name="wr_10" value="포함" checked="">포함
+										</td>
+										<td style="width:70px;"> <input type="radio" name="wr_10" value="미포함" checked="">미포함
+										</td>
+									</tr> 
+								</table>
+									<ul>
+										<li>
+										  <textarea id="wr_content" name="wr_content" class="tx" style="width: 400px; word-break: break-all; font-size: 12px;" rows="10" itemname="내용">남기고 싶은 말씀</textarea>
+										</li>
+									</ul>
+								<p align="center"><input type="submit" value="완료">    <input type="reset" value="다시작성"></p>
+							 </fieldset>
+						</form>	
+				</div>
+				
+			</section>
+		</article>
+	<!-- footer  삽입 ----------------------------------------- -->
+		<footer>
+			<p>사업자등록번호 104-81-59383 통신판매업신고번호 중구 065325 중앙HTA㈜</p>
+			<p>서울특별시 종로구 율곡로10길 105 디아망 401호(봉익동 10-1 디아망 401호)</p>
+			<p>TEL: 070-8240-3211 FAX: 02-777-5407 COPYRIGHT ⓒ 2015 HTA CO, LTD. ALL RESERVED</p>
+		</footer>
+  </div><!-- container -->
+ </p>
+ </body>
+</html>

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+   <title>Document</title>
+<style type="text/css">
+
+@charset "utf-8";
+	ul{
+        list-style:none;
+        -webkit-padding-start: 0px;
+	}
+	body {
+		font: 14px '맑은 고딕';
+		background-color:#bfdfff;
+		margin:0px;
+		padding:0px;
+	}
+	.all{
+		text-align:center;
+		/* -webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px; */
+	}
+	.container {/* 전체 div */
+		background-color:#e4e4e4;
+		width: 1200px;
+		padding: 0px;
+		margin : -15px auto;
+	}
+
+	header {
+		background-color:white;
+		position : relative;
+		height : 180px;
+		background-size: 100% auto;
+		/* background-repeat: no-repeat; */
+		/* background-position: left top; */
+	}
+	/* header img{
+        float:left;
+    } */
+
+	.navi{ /* 위의메뉴바 */
+		position: relative;
+		float: right;
+		right:0px; top: 50px;
+		width:65%;
+		height:60px;
+	}
+	.navi ul li {
+		position: relative;
+		float:left;
+		font-size:15px;
+	}
+	.navi ul li a, .navi a:visited { /* 위의메뉴바 */
+        position : relative;
+		padding: 10px 15px 15px 15px;
+		display: block;
+		color: #373737;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-decoration: none;
+		text-align:center;
+		z-index:2;
+	}
+
+	.mainlist li:hover .a1 {
+        font-size: 22px;
+        text-shadow:0px 2px 2px #000;
+        background-color: rgba(120, 120, 255, 0.2);
+        font-weight: bold;
+        color:#3366ff;
+        z-index:2;
+	}
+
+	.caption {
+		position: absolute;
+        overflow:hidden;
+		top:54px;left:0px;
+		height: 0;
+        transition: all 0.3s ;
+		z-index: 1;
+	}
+	/* .caption li{
+	    padding: 10px 15px 15px 15px;
+	        background: rgba(120,120,120,0.5);
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-align: center;
+		float:none;
+	} 충돌일으켯음 아래거랑*/
+	.caption .a2{
+	    padding: 10px 15px 15px 15px;
+        background: rgba(150,150,150,0.5);
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-decoration: none;
+		text-align: center;
+		float:none;
+	}
+
+    .caption .a2:hover{
+         background-color:rgba(120,120,120,1);
+		 text-shadow:0px 2px 2px #000;
+		 color: white;
+    }
+
+	.mainlist li:hover a + .caption,	.mainlist li:hover .caption{
+     height:250px;
+        /*-webkit-transform: translateY(200px);*/
+	}
+
+
+	.line{
+		position:absolute;
+		top:180px;
+		border:2px solid #bfdfff;
+		height:2px;
+		width:500%;
+	}
+
+	/* 가운데 사진 넘어가는 */
+		aside{
+			padding:50px;
+		    overflow: visible;
+		}
+		aside li{
+			margin:50px;
+		}
+		.sidebar{
+			float:left;
+			margin-top:-30px;
+			width:150px;
+			height:550px;
+			background-color:#fff;
+			padding-top:30px;
+			padding-left:10px;
+			padding-right:10px;
+		}
+		/*
+		.sidebar img{
+		margin-bottom:5px;
+		border:1px solid #ccc;
+		text-align:center;
+		}
+		*/
+		aside li{
+			 margin-left:50px;
+			 margin:10px;
+			 margin-top:-10px;
+			border-bottom:1px solid #ddd ;
+			padding:15px 15px;
+		}
+		aside h3{
+			 margin-left:50px;
+			 margin:10px;
+			border-bottom:1px solid #ddd ;
+			padding:15px 15px;
+			background-color:#ff6666;
+			color:#ffffff;
+		}
+		aside a:link{
+			text-decoration: none;
+		}
+		aside li:hover{
+			background-color:#ddd;
+			font-weight:bold;
+		}
+		.banner{
+			position:relative;
+			padding:30px;
+			float: right;
+			width: 900px;
+			height:1000px;
+			background-color:white;
+			margin: 30px;
+		}
+		.banner img{
+			width:100%;
+		}
+		footer{
+			margin-top:140px;
+			padding: 20px 0px; background:#97dbff;
+			color:#494949;     text-align:center;
+			clear:both;
+		}
+</style>
+
+ </head>
+
+ <p class= "all">
+ <div class="container">
+	<!--   헤더부분   -->
+		<header>
+			<a href="main_page_save.html"><img src="image\mainicon2.png" style= width:400px;height:180px;></a>
+			<nav class="navi">
+					<ul class="mainlist"><!-- 예약 : 이름 연락처 보내기 취소(폼) / 이용 요금(표로)  -->
+						<li><a href="insa1.html" class = "a1">회사 소개</a>
+							<div class="caption">
+								<ul>
+									<li><a href="insa1.html" class = "a2">인사말</a></li>
+									<li><a href="come_road.html" class = "a2">오시는 길</a></li>
+									<li><a href="gisa.html" class = "a2">기사 소개</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#" class = "a1">차량 소개</a>
+							<div class="caption">
+								<ul>
+									<li><a href="use_money.html" class = "a2">귀성용</a></li>
+									<li><a href="use_money.html" class = "a2">소풍용</a></li>
+									<li><a href="use_money.html" class = "a2">특수 구조</a></li>
+									<li><a href="use_money.html" class = "a2">기타</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="reservation.html" class = "a1">이용 안내</a>
+							<div class="caption">
+								<ul>
+									<li><a href="reservation.html" class = "a2">예약</a></li>
+									<li><a href="use_money.html" class = "a2">이용 요금</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="use_money.html" class = "a1">이용 문의</a></li> <!--  게시판-->
+						</li>
+					</ul>
+			</nav><!-- nav -->
+		</header>
+	<!--   메인 간판사진   -->
+	<div class="line"></div>
+		<aside class="sidebar">
+				 <h3> 회사 소개</h3>
+			  <div class="div_left">
+				  <ul>
+						<li><a href="insa1.html">인사말</a></li>
+						<li><a href="come_road.html">오시는 길</a></li>
+						<li><a href="gisa.html">기사 소개</a></li>
+				  </ul>
+			  </div>
+		</aside>
+
+		<article>
+			<section class="content">
+				<div class="banner">
+					<h1 style="font-size:30px">기사 소개</h1>
+						<img src="image/gisa.jpg">
+				</div>
+			</section>
+		</article>
+	<!-- footer  삽입 ----------------------------------------- -->
+		<footer>
+			<p>사업자등록번호 104-81-59383 통신판매업신고번호 중구 065325 중앙HTA㈜</p>
+			<p>서울특별시 종로구 율곡로10길 105 디아망 401호(봉익동 10-1 디아망 401호)</p>
+			<p>TEL: 070-8240-3211 FAX: 02-777-5407 COPYRIGHT ⓒ 2015 HTA CO, LTD. ALL RESERVED</p>
+		</footer>
+  </div><!-- container -->
+ </p>
+ </body>
+</html>

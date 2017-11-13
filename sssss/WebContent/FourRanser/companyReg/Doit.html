@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<TITLE>자바스크립트를 활용한 텍스트 마우스 오버 효과</TITLE>
+</HEAD>
+<SCRIPT language="javaScript">
+	function paragraph_onmouseover(){
+		paragraph.innerText="안녕하세요 ^^ Do it~! 입니다.";
+		paragraph.style.color="Blue";
+	}
+	
+	function paragraph_onmouseout(){
+		paragraph.innerText="마우스를 여기에 위치해보세요.";
+		paragraph.style.color="Black";
+	}
+</SCRIPT>
+<BODY>
+	<P ID=paragraph onmouseover=paragraph_onmouseover() onmouseout=paragraph_onmouseout()>
+		마우스를 여기에 위치해보세요.
+	</P>
+</BODY>
+</HTML>

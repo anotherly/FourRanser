@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+   <title>Document</title>
+<style type="text/css">
+
+@charset "utf-8";
+	ul{list-style:none;
+	-webkit-padding-start: 0px;
+	}
+
+
+
+header,section,footer,aside,article{
+display:block;}
+
+.content{
+background-color:#ffffff;
+padding-top:30px;
+padding-left:10px;
+width:1000px;
+float:right;
+border:1px solid;
+position:block;
+}
+
+	body {
+		font: 14px '맑은 고딕';
+		margin:0px;
+		padding:0px;
+	}
+	.all{
+		text-align:center;
+		/* -webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px; */
+	}
+	.container {/* 전체 div */
+		width: 1200px;
+		margin : 0 auto;
+	}
+	.upper {/* 헤더부분 div */
+		margin-bottom:30px;
+	}
+
+	header {
+		position : relative;
+		height : 180px;
+		background-size: 100% auto;
+		/* background-repeat: no-repeat; */
+		/* background-position: left top; */
+	}
+	/* header img{
+        float:left;
+    } */
+
+	.navi{ /* 위의메뉴바 */
+		position: relative;
+		float: right;
+		right:30px; top: 50px;
+		width:65%;
+		height:60px;
+		/* background-color: white;
+		background-color: rgba( 255, 255, 255, 0 ); */
+		/* border-bottom:3px solid blue; */
+	}
+
+	.navi .fake{
+		width:800px;
+		height:500px;
+		margin:0px;
+		padding:0px;
+		overflow:hidden;
+	}
+	.navi ul{
+		list-style: none;
+		height:40px;
+		padding-top:10px;
+		margin-bottom:0px;
+		/* padding-bottom:5px; */
+	}
+	.navi ul li {
+		position: relative;
+		float:left;
+		font-size:15px;
+	}
+	.navi ul li a, .navi a:visited { /* 위의메뉴바 */
+        position : relative;
+		padding: 10px 15px 15px 15px;
+		display: block;
+		color: #373737;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-decoration: none;
+		text-align:center;
+		z-index:2;
+	}
+
+	.navi a:hover , .navi a:active{
+        font-size: 22px;
+        text-shadow:0px 2px 2px #000;
+        background-color:#00ccff;
+        background-color: rgba(120, 120, 255, 0.3);
+        font-weight: bold;
+        color:#3366ff;
+        z-index:2;
+        opacity:1;
+	}
+
+	.caption {
+		position: absolute;
+        overflow:hidden;
+		top:52px;left:0px;
+		height: 0;
+		/* padding-top: 20px; */
+		/* opacity: 1; */
+		-webkit-transition: all 0.3s ease-in-out;
+		z-index: 1;
+	}
+
+	.caption ul li{
+	    padding: 10px 15px 15px 15px;
+        background: rgba(120,120,120,0.5);
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		width: 150px;
+		text-align: center;
+		float:none;
+	}
+
+	.mainlist li a:hover .caption{
+
+     height:200px;
+        /*-webkit-transform: translateY(200px);*/
+	}
+
+
+	.line{
+		position:absolute;
+		top:194px;
+		border:2px solid lightblue;
+		height:2px;
+		width:500%;
+	}
+
+
+	.main{
+		margin:-17px 0px 50px 0px; padding:0px;
+		width: 100%; height:400px;
+		background-image: url(image/set22.jpg);
+		background-size: 100% auto;
+	}
+	.main h2{
+		position:relative;
+		left:100px;
+		top:100px;
+		font-size:2em;
+		color:#001188;
+		text-shadow:0px 1px 1px #000;
+	}
+	.main span{
+		 color : red;
+	}
+	.main p{
+		font: 24px;
+		text-align:center;
+	}
+
+	.middle{
+		margin:10px;
+		height:300px;
+	}
+	.middle div{
+		float:left;width:295px;height:270px;
+		color:white;
+	}
+	.middle div ul{
+		margin-left:50px;
+		margin-top:50px;
+	}
+
+	.middle .box1{background:lightgray;color:#454545;}
+	.box2{background:#6699ff;}
+	.box3{background:#006633;}
+	.box4{background:blue;}
+
+	footer{
+		margin-top:140px;
+		padding: 20px 0px; background:#97dbff;
+		color:#494949;      text-align:center;
+		clear:both;
+	}
+
+
+	aside{
+padding:50px;
+
+    overflow: visible;}
+aside li{
+margin:50px;
+}
+.sidebar{
+float:left;
+margin-top:-30px;
+width:150px;
+height:550px;
+background-color:#fff;
+padding-top:30px;
+padding-left:10px;
+padding-right:10px;
+}
+/*
+.sidebar img{
+margin-bottom:5px;
+border:1px solid #ccc;
+text-align:center;
+}
+*/
+aside li{
+ margin-left:50px;
+ margin:10px;
+ margin-top:-10px;
+border-bottom:1px solid #ddd ;
+padding:15px 15px;
+}
+aside h3{
+ margin-left:50px;
+ margin:10px;
+border-bottom:1px solid #ddd ;
+padding:15px 15px;
+background-color:#ff6666;
+color:#ffffff;
+}
+aside a:link{text-decoration: none;
+}
+aside li:hover{
+background-color:#ddd;
+font-weight:bold;
+}
+
+/* 목록 */
+.ep_board1{ width:100%; }
+.ep_board1 th{   border: 1px solid #EAEAEA; height:40px; text-align:center; font-size:13px; background-color:#f8f8f8; font-weight:normal; color:#000; text-align:center;}
+.ep_board1 td{  border: 1px solid #EAEAEA;  height:40px; font-size:13px; padding-left:20px }
+.ep_board1.bg{ background-color:#F9F9FA; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+line-height: 20px;
+margin-bottom:20px;
+}
+
+.span{
+color: rgb(255, 255, 255); background-color: rgb(255, 0, 0);
+
+}
+
+span{
+
+}
+.bLine {
+    border-top: 2px solid #d80e43;
+}
+
+
+.ep_board1 {
+    width: 100%;
+}
+
+
+</style>
+ </head>
+
+ <p class= "all">
+
+	<div class="line"></div> <div class="line"></div>
+ <div class="container">
+	<!--   헤더부분   -->
+	<header>
+		<img src="image\mainicon2.png" style= width:400px;height:180px;>
+		<nav class="navi">
+			<div class="fake">
+				<ul class="mainlist"><!-- 예약 : 이름 연락처 보내기 취소(폼) / 이용 요금(표로)  -->
+					<li>
+                        <a href="#">회사 소개
+                            <div class="caption">
+                                <ul>
+                                    <li>인사말</li>
+                                    <li>오시는 길</li>
+                                    <li>기사 소개</li>
+                                </ul>
+                            </div>
+                        </a>
+					</li>
+					<li>
+                        <a href="#">차량 소개
+                            <div class="caption">
+                                <ul>
+                                    <li>귀성용</li>
+                                    <li>소풍용</li>
+                                    <li>특수 구조</li>
+                                    <li>기타</li>
+                                </ul>
+                            </div>
+                        </a>
+					</li>
+					<li>
+                        <a href="#">이용 안내
+                            <div class="caption">
+                                <ul>
+                                    <li>예약</li>
+                                    <li>이용 요금</li>
+                                </ul>
+                            </div>
+                        </a>
+					<li><a href="#">이용 문의</a></li> <!--  게시판-->
+					</li>
+				</ul>
+			</div>
+		</nav><!-- nav -->
+	</header>
+	<!--   메인 간판사진   -->
+
+		 <aside class="sidebar">
+			 <h3> 알립니다</h3>
+			  <ul>
+					<li><a href="#">이용 안내</a></li>
+					<li><a href="#">객실 소개</a></li>
+					<li><a href="#">예약 방법</a></li>
+					<li><a href="#">예약하기</a></li>
+			  </ul>
+		 </aside>
+
+  <article>
+  <section class="content">
+  <font align="Left"><h2>이용 요금 안내 </h2></font>
+  <div class="banner" style="float:center;width:600px; margin-right:25px;">
+
+<!-- Header End -->
+	<div>
+		<p><span style="color: rgb(239, 0, 124);">*헬스나, 수영 등록하실 때, 할 수 있을지 묻지 않으시지요?</span></p>
+
+		<p><span style="color: rgb(239, 0, 124);">클라이밍 역시, 헬스나 수영과 마찬가지로 캔디 클라이밍과 함께 하면 전혀 어렵지 않습니다.</span></p>
+
+		<p><span style="color: rgb(239, 0, 124);">체력 조건이나 클라이밍 경험과 상관없이 시작 가능하니, 지금 바로 전화해보세요. </span></p>
+
+		<p><span style="color: rgb(0, 0, 0);">* 강습은 선착순 등록자 부터 진행이 됩니다. 전화 예약은 되지 않습니다.</span></p>
+
+		<p>* 강습료는 이용료가 포함된 가격입니다.
+		</p><p>*방문 상담시 다양한 할인 혜택이 준비되어 있습니다. </p>
+		<p>* 누구나 3개월 정도 강습후에는 혼자자유롭게 운동 가능 합니다.
+		</p>
+
+
+	<p><span class="span">기초 강습 A</span></p>
+	<table class="ep_board1 bLine">
+	<tbody>
+		<tr>
+			<td>1개월</td>
+			<td>200,000원</td>
+		</tr>
+		<tr>
+			<td>3개월</td>
+			<td>540,000원</td>
+		</tr>
+	</tbody>
+	</table>
+		
+	<p>* 기초강습 A,B,C,D,E 강습은 동일합니다.</p><p><span class="span"></span></p>
+	<p><span class="span"></span></p>
+
+	<p><span class="span">기초 강습 B</span></p>
+	<table class="ep_board1 bLine"><tbody><tr><td>1개월</td><td>180,000원</td></tr><tr><td>3개월</td><td>490,000원</td></tr></tbody></table>
+	<p>* 주2 회 강습 (월수반 / 화목반 선택) +주1회 자율 운동(주 3회운동)</p><p>* 기초강습 A,B,C,D,E 강습은 동일합니다.</p>
+
+	<p><span class="span">기초 강습 C</span></p>
+	<table class="ep_board1 bLine"><tbody><tr><td>1개월</td><td>150,000원</td></tr><tr><td>3개월</td><td>390,000원</td></tr></tbody></table>
+	<p>*  주2회 강습
+	(월수반 / 화목반 선택)</span></p><p>* 기초강습 A,B,C,D,E 강습은 동일합니다.</p>
+
+	<p><span class="span">기초 강습 D<span style="color: rgb(118, 123, 134); background-color: rgb(255, 255, 255);">(맘대로 강습:선착순 마감)</span></span></p>
+	<table class="ep_board1 bLine">
+	<tbody><tr><td>1개월</td><td>180,000원</td></tr><tr><td>3개월</td><td>490,000원</td></tr></tbody></table>
+
+	<p>* 주2회 강습(월수화목 10시타임 원하는 날 2회 선택)</p><p>* 이벤트와 중복할인은 되지 않습니다.</p>
+	<p>* 기초강습 A,B,C,D,E 강습은 동일합니다.</p><p><span class="span">기초 강습 E<span style="color: rgb(118, 123, 134); background-color: rgb(255, 255, 255);">(대학생,대학원생)</span></span></p>
+	<table class="ep_board1 bLine"><tbody><tr><td>1개월</td><td>120,000원</td></tr><tr><td>3개월</td><td>300,000원</td></tr></tbody></table>
+	<p>*  주2회 강습(월수반 / 화목반 선택)</p><p>* 기초강습 A,B,C,D,E 강습은 동일합니다.</p>
+ </div>
+ </div>
+ </div>
+
+
+
+  </section>
+  </article>
+
+
+
+
+	<!-- footer  삽입 ----------------------------------------- -->
+	<footer>
+		<p>사업자등록번호 104-81-59383 통신판매업신고번호 중구 065325 중앙HTA㈜</p>
+		<p>서울특별시 종로구 율곡로10길 105 디아망 401호(봉익동 10-1 디아망 401호)</p>
+		<p>TEL: 070-8240-3211 FAX: 02-777-5407 COPYRIGHT ⓒ 2015 HTA CO, LTD. ALL RESERVED</p>
+	</footer>
+  </div>
+ </p>
+ </body>
+</html>
